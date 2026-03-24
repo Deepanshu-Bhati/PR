@@ -2,7 +2,6 @@
 
 SkyBook is a comprehensive, full-stack flight booking application built with the MERN stack (MongoDB, Express, React, Node.js). It features real-time seat availability updates, distributed locking for seat selection, secure payments via Stripe, and email notifications.
 
-![SkyBook Banner](https://via.placeholder.com/1200x400?text=SkyBook+Flight+Reservation+System)
 
 ## 🚀 Features
 
@@ -44,80 +43,6 @@ Before running this project, ensure you have the following installed:
 -   [MongoDB](https://www.mongodb.com/try/download/community) (Local or Atlas)
 -   [Redis](https://redis.io/download/) (Local or Cloud)
 
-## 📦 Installation & Setup
-
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/suvomx1999/SkyBook.git
-    cd SkyBook
-    ```
-
-2.  **Install Backend Dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Install Frontend Dependencies**
-    ```bash
-    cd client
-    npm install
-    cd ..
-    ```
-
-4.  **Environment Variables**
-    Create a `.env` file in the root directory and add the following:
-    ```env
-    NODE_ENV=development
-    PORT=5001
-    MONGO_URI=your_mongodb_connection_string
-    JWT_SECRET=your_jwt_secret_key
-    STRIPE_SECRET_KEY=your_stripe_secret_key
-    EMAIL_USER=your_email_address
-    EMAIL_PASS=your_email_app_password
-    CLIENT_URL=http://localhost:5173
-    ```
-
-    Create a `.env` file in the `client` directory:
-    ```env
-    VITE_API_URL=http://localhost:5001/api
-    VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-    ```
-
-5.  **Run the Application**
-    You need three terminals:
-
-    *Terminal 1: Redis Server*
-    ```bash
-    redis-server
-    ```
-
-    *Terminal 2: Backend Server*
-    ```bash
-    npm run server
-    ```
-
-    *Terminal 3: Frontend Client*
-    ```bash
-    npm run dev
-    ```
-
-    Access the app at `http://localhost:5173`.
-
-## 👑 Admin Setup
-
-By default, new users are regular users. To create an admin user:
-
-**Local Development:**
-```bash
-node src/scripts/makeAdmin.js admin@example.com mypassword "Admin Name"
-```
-
-**Production:**
-1.  Connect to your production DB.
-2.  Run the script locally pointing to the prod DB.
-    ```bash
-    MONGO_URI=your_prod_mongo_uri node src/scripts/makeAdmin.js admin@example.com mypassword "Admin Name"
-    ```
 
 ## 🚀 Deployment
 
